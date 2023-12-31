@@ -1,6 +1,7 @@
 { fetchFromGitHub }:
 
 {
+  {
   linux-surface = fetchFromGitHub {
     owner = "linux-surface";
     repo = "linux-surface";

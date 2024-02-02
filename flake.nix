@@ -239,4 +239,7 @@
       common-pc-ssd = import ./common/pc/ssd;
     };
   };
+  hydraJobs = {
+      build-microsoft-surface-pro-intel = forAllSystems (system: self.packages.${system}.microsoft-surface-pro-intel);
+  };
 }

@@ -238,7 +238,8 @@
       common-pc-ssd = import ./common/pc/ssd;
     };
   };
-      hydraJobs = {
-        build = (system: packages.${system}.microsoft-surface-pro-intel);
-      };
+  hydraJobs = {
+
+        build.x86_64-linux = packages.x86_64-linux.microsoft-surface-pro-intel;
+  };
 }

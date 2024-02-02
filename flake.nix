@@ -238,7 +238,7 @@
       common-pc-ssd = import ./common/pc/ssd;
     };
   };
-  hydraJobs = {
-      build-microsoft-surface-pro-intel = microsoft-surface-pro-intel;
-  };
+      hydraJobs = {
+        build = (system: packages.${system}.microsoft-surface-pro-intel);
+      };
 }

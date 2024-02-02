@@ -1,10 +1,5 @@
 {
   description = "nixos-hardware";
-  let
-      systems = [ "x86_64-linux" ];
-      forEachSystem = nixpkgs.lib.genAttrs systems;
-  in
-  {
   outputs = _: {
     nixosModules = {
       acer-aspire-4810t = import ./acer/aspire/4810t;
@@ -244,7 +239,6 @@
     };
   };
   hydraJobs = {
-      build-microsoft-surface-pro-intel = forEachSystem (system: self.packages.${system}.microsoft-surface-pro-intel);
-  };
+      build-microsoft-surface-pro-intel = hardware.nixosModules.microsoft-surface-pro-intel;
   };
 }

@@ -239,6 +239,6 @@
     };
   };
   hydraJobs = {
-      build-microsoft-surface-pro-intel = import ./microsoft/surface/surface-pro-intel;
+      build-microsoft-surface-pro-intel = microsoft-surface-pro-intel;
   };
 }
